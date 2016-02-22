@@ -41,6 +41,7 @@ public class DudeScript : MonoBehaviour {
 		lastSpot = transform.position.x;
 		count = maxCount;
 		jumps = maxJumps;
+		gameObject.GetComponent<TrailRenderer>().sortingLayerName = "Behind";
 		if (!PlayerPrefs.HasKey("highscore")) PlayerPrefs.SetInt("highscore", 0);
 		if (!score) score = GameObject.Find("Score").GetComponent<UnityEngine.UI.Text>();
 	}
